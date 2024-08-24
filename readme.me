@@ -127,17 +127,28 @@ Chapter_4.
 		git cat-file -p $(object-id) -- reads file content.
 		gt cat-file -t  $(object-id) -- that`s says which type of object.
 
-Chapter_5.
+Chapter_5. [gigaster part 1]
 		
 		git reset --soft $(commit-id)  -- Remove All Files Repo And Add Staging Area
 		git reset --mixed $(commit-id) -- Removed Staging And File Exists In Work-Dir
 		git reset --hard $(commit-id)  -- Removed Work-Dir And Staging Area.
 
 
+		--soft 
+			new file : Your All Staging Files Are Added In Reference Commit Staging Area.
+			modified : Files Are Added in Modified Area.
 
+		--mixed	
+			new file : Your All Staging Files Are Added In Reference Commit Untracked Area.
+			modified : File Exist In REference Commit . They Added In Modified Area. Otherwise They Added In Untracked Area. 
+
+		
+		--hard.
+				move to head reference commit.
+	
 
 	
-Chapter_6 
+Chapter_6 [ gigaster part 2]
 
 		git rev-parse HEAD~1   -- Return The (Commit Id)
 		git cherry-pick $(commit-id)
