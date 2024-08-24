@@ -33,7 +33,6 @@ Chapter_2. [ Git Objects ]
 	* Commit -- Takes Snapshot of Tree.
 
 #----------------------------------------------------------------------------------------------------------------------------------------------
-	[commit] 52ytagc		
 
 	commiter : guru						[ Tree ]						    	[blob] 555aaa file2.txt
 	author : guru			 ---->			[blob] 555abc file.txt    --->
@@ -163,13 +162,23 @@ Chapter_6 [ gigaster part 2]
 			
 			-- Monitering Referencing Heads. 
 	 
-Chapter_7
+Chapter_7 [ git diff ]
+
+
+	git diff $(commit-id) or git diff --no-index $(file1) $(file2)
 
 	git diff   ( compareing staged files )
 	git diff -- new_file.txt  ( specific file difference 
 	git diff --cached  ( working area and reop diff )	
 	git diff --no-index  file1 file2 
 
+
+	git apply -C1 $(patch-file) if lines are not match so search oneline top and one line down.
+
+
+
+
+Chapter_8. [Merge Theroy HOw Works]
 
 	HOW MERGe WORKS
 	----------------
