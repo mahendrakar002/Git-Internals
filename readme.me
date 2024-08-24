@@ -142,7 +142,6 @@ Chapter_5. [gigaster part 1]
 			new file : Your All Staging Files Are Added In Reference Commit Untracked Area.
 			modified : File Exist In REference Commit . They Added In Modified Area. Otherwise They Added In Untracked Area. 
 
-		
 		--hard.
 				move to head reference commit.
 	
@@ -152,11 +151,19 @@ Chapter_6 [ gigaster part 2]
 
 		git rev-parse HEAD~1   -- Return The (Commit Id)
 		git cherry-pick $(commit-id)
-		git revert (commit-id)	
-		git reflog  -- Updates The Hisotory What You Do.
 
- 
-Chapter_5
+			- Genrate A Different Comment-id With Modified Files and New Files In This Commit.
+
+		git revert (commit-id)	
+
+			- Modifies Files As The Same Of Commit-id-parent.
+			- Create New Commit With Reference Commit-Message.
+
+		git reflog  -- Updates The Hisotory What You Do.
+			
+			-- Monitering Referencing Heads. 
+	 
+Chapter_7
 
 	git diff   ( compareing staged files )
 	git diff -- new_file.txt  ( specific file difference 
