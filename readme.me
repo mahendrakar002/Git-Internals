@@ -183,13 +183,22 @@ Chapter_8. [Merge Theroy HOw Works]
 	HOW MERGe WORKS
 	----------------
 
-		SAME ANSciTOR IN TWO BRANCHES.
+		SAME ANSCITOR IN TWO BRANCHES.
 		GENRATE PATCHES BOTH BRANCH  DIFFS WITH ANSICTOR
 		APPLY PATCHES TOGETHTEr
 
 	
 	git merge-base head $(another-branch) that show use  both have same commit id to merge together 
-	
+	git apply $(merge-base) $(patch)  --index
+	git write-tree  -- (return the tree objectid)
+	git write-tree -- return the tree object-id
+	git commit-tree $(commit-id) -m $(message)  -p $(commit-id) $(commit-id)
+
+
+
+Chapter_9. [ merge -conficts ]
+
+
 	git rebase -i  ( git use the cherry-pick to consist a historys ) 
 	git merge -i 
 
