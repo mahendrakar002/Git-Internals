@@ -207,6 +207,35 @@ Chapter_9. [ merge -conficts ]
 
 Chapter_10. [rebase]
 
+				( before )
+		[commit-1] -- [commit-2] -- [commit-3] -- [commit-4]
+					  |
+		        	  [commit-5] -- [commit-6] -- [commit-7] (feature)
+
+
+				( after )
+		> git checkout feature.
+		> git rebase master feature.
+
+		[commit-1] -- [commit-2] -- [commit-3] -- [commit-4] -- [commit-5&6&7]
+
+
+
+	
+	git rebase --onto $<newbranch> <upstream> <branch>
+
+
+	git checkout <branch>
+	git reset --hard <newbranch>
+	git diff <upstream>...<branch>
+	git cherry-pick all differences.
+
+
+
+
+
+														
+
 
 
 
