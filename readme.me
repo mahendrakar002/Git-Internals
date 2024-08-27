@@ -190,10 +190,13 @@ Chapter_8. [Merge Theroy HOw Works]
 	
 	git merge-base head $(another-branch) that show use  both have same commit id to merge together 
 	git apply $(merge-base) $(patch)  --index
-	git write-tree  -- (return the tree objectid)
-	git write-tree -- return the tree object-id
-	git commit-tree $(commit-id) -m $(message)  -p $(commit-id) $(commit-id)
+	git write-tree  -- (return the tree objectid)   --- (obj1)
 
+	git apply --index $(patchfile)
+	git write-tree -- return the tree object-id      --- (obj2) 
+
+
+	git commit-tree $(obj2) -m $(message)  -p $(head-point-branch) -p  $(obj1)
 
 
 Chapter_9. [ merge -conficts ]
