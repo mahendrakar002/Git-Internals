@@ -225,21 +225,40 @@ Chapter_10. [rebase]
 		[commit-1] -- [commit-2] -- [commit-3] -- [commit-4] -- [commit-5&6&7]
 
 
+	
+	git rebase --onto [commit-2] [ commit-4] .
+
+				(before)
+		[commit-1] -- commit-2  -- commit-3 -- commit-4
+					   |
+					commit-5 -- commit-6
+				
+				(after)
+		commit-1 -- commit-2 -- commit-5 -- commit-6
+
 
 	
 	git rebase --onto $<newbranch> <upstream> <branch>
+	
 
-
+	(conditions are apply this command)
 	git checkout <branch>
 	git reset --hard <newbranch>
 	git diff <upstream>...<branch>
-	git cherry-pick all differences.
+	git cherry-pick all differences. upstream-chil
 
-
+	
 
 
 
 														
+chapeter_10. [ stash ]
+	
+	git stash list 
+	git stash save -m "message"
+	git stash apply
+	git stash drop 
+	git stash clear 
 
 
 
